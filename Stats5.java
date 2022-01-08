@@ -1,21 +1,10 @@
-public class Stats5 {
+class WindChill {
     public static void main(String[] args) {
-        int n=5;
-        double x1= Math.random();
-        double x2= Math.random();
-        double x3= Math.random();
-        double x4= Math.random();
-        double x5= Math.random();
-        System.out.println(x1);
-        System.out.println(x2);
-        System.out.println(x3);
-        System.out.println(x4);
-        System.out.println(x5);
-        double min = Math.min(x1, Math.min(x2, Math.min(x3, Math.min(x4, x5))));
-        double max = Math.min(x1, Math.min(x2, Math.min(x3, Math.min(x4, x5))));
-        double avg = (x1+x2+x3+x4+x5)/n;
-        System.out.println("minimum value is:" + min);
-        System.out.println("maximum value is:" + max);
-        System.out.println("Avg value is:" + avg);
+        double t = Double.parseDouble(args[0]);
+        double v = Double.parseDouble(args[1]);
+        double w = 35.74 + 0.6215*t + (0.4275*t - 35.75) * Math.pow(v, 0.16);
+        System.out.println("Temperature = " + t);
+        System.out.println("Wind speed  = " + v);
+        System.out.println("Wind chill  = " + w);
     }
 }
